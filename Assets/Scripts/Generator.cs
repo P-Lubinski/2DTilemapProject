@@ -13,7 +13,7 @@ public class Generator : MonoBehaviour
     public int birthLimit;      // these two variables limit how many "dead" or "alive" tiles can spawn next to eachother
 
     [Range(1, 8)]
-    public int deathLimit;      
+    public int deathLimit;
 
     [Range(1, 10)]
     public int numRep;          // number of repetitions
@@ -33,7 +33,7 @@ public class Generator : MonoBehaviour
     int width;
     int height;
 
-    public void doSim (int numRep)      // Simulation taking number of repetitions
+    public void doSim(int numRep)      // Simulation taking number of repetitions
     {
         clearMap(false);
         width = tmapSize.x;
@@ -133,9 +133,9 @@ public class Generator : MonoBehaviour
         return newMap;
     }
 
-    void Update ()
+    void Update()
     {
-		if (Input.GetMouseButtonDown(0)) // left mouse button to generate
+        if (Input.GetMouseButtonDown(0)) // left mouse button to generate
         {
             doSim(numRep);
         }
@@ -160,23 +160,31 @@ public class Generator : MonoBehaviour
         if (mf)
         {
             var savePath = "Assets/" + saveName + ".prefab";
-            if (AssetDatabase.LoadAssetAtPath(savePath, typeof(GameObject)))
+            if (AssetDatabase.LoadAssetAtPath(savePath, typeof(GameObject))) // if file of this name exsists;
             {
-                count++;
-                saveAssetMap();
-            }
-            if (PrefabUtility.CreatePrefab(savePath,mf))
-            {
-                EditorUtility.DisplayDialog("Tilemap saved", "Your tilemap was saved under" + savePath, "Continue");
+                Add(); // add +1 to the name file and restart this function
             }
             else
             {
-                EditorUtility.DisplayDialog("Tilemap NOT saved", "An error occured while trying to save under" + savePath, "Continue");
+                if (PrefabUtility.CreatePrefab(savePath, mf))
+                {
+                    EditorUtility.DisplayDialog("Tilemap saved", "Your tilemap was saved under" + savePath, "Continue");
+                }
+                else
+                {
+                    EditorUtility.DisplayDialog("Tilemap NOT saved", "An error occured while trying to save under" + savePath, "Continue");
+                }
             }
         }
     }
 
-    public void clearMap (bool complete)    // clearing the whole map
+    public void Add()
+    {
+        count++;
+        saveAssetMap();
+    }
+
+    public void clearMap(bool complete)    // clearing the whole map
     {
         topMap.ClearAllTiles();
         botMap.ClearAllTiles();

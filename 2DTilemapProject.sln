@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2DTilemapProject", "2DTilemapProject.csproj", "{4A049453-6CCC-1C3E-3973-690C8EB6D8EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2DTilemapProject.Editor", "2DTilemapProject.Editor.csproj", "{803F0160-CD17-2266-D508-151F6BFF7176}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A049453-6CCC-1C3E-3973-690C8EB6D8EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A049453-6CCC-1C3E-3973-690C8EB6D8EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A049453-6CCC-1C3E-3973-690C8EB6D8EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A049453-6CCC-1C3E-3973-690C8EB6D8EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{803F0160-CD17-2266-D508-151F6BFF7176}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{803F0160-CD17-2266-D508-151F6BFF7176}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{803F0160-CD17-2266-D508-151F6BFF7176}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{803F0160-CD17-2266-D508-151F6BFF7176}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
